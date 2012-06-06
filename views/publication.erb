@@ -2,6 +2,7 @@
 <html class="no-js" lang="en">
   <head>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="http://printer.gofreerange.com/stylesheets/print.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <script src="http://printer.gofreerange.com/javascripts/printer.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
@@ -28,14 +29,14 @@
     </div>
     <div class="paper">
       <div class="content">
-        <section id="featured">
+        <section class="featured">
           <h1><%= @featured %></h1>
           <p>Cook some shit with <%= @featured %> in it!</p>
         </section>
-        <section id="recipe">
+        <section class="recipe">
           <p></p>
         </section>
-        <section id="in-season">
+        <section class="in-season">
           <h2>Also now in season</h2>
           <ul>
             <% @now_in_season.each do |item| %>
@@ -43,7 +44,7 @@
             <% end %>
           </ul>
         </section>
-        <section id="last-chance">
+        <section class="last-chance">
           <h2>Last chance to eat</h2>
           <ul>
             <% @last_chance.each do |item| %>
@@ -51,7 +52,7 @@
             <% end %>
           </ul>
         </section>
-        <section id="last-chance">
+        <section class="last-chance">
           <h2>Now out of season</h2>
           <ul>
             <% @now_out_of_season.each do |item| %>
