@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://printer.gofreerange.com/stylesheets/print.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <script src="http://printer.gofreerange.com/javascripts/printer.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        $("#previewPage").click(Printer.previewPage);
+        $("#printPage").click(function() {
+          var printerID = prompt("Enter the URL of the printer to target");
+          Printer.printPage(printerID, function(result) {
+            if (result.response == "ok") {
+              alert("Page successfully sent for printing");
+            } else {
+              alert("There was a problem sending this content");
+              console.log("Error response", result);
+            }
+          });
+        });
+      })
+    </script>
+  </head>
+  <body class="preview">
+    <div class="controls">
+      <a id="previewPage" href="#">Preview</a>
+      <a id="printPage" href="#">Print</a>
+    </div>
+    <div class="paper">
+      <div class="content">
+        <section id="featured">
+          <h1><%= @featured %></h1>
+          <p>Cook some shit with <%= @featured %> in it!</p>
+        </section>
+        <section id="recipe">
+          <p></p>
+        </section>
+        <section id="in-season">
+          <h2>Also now in season</h2>
+          <ul>
+            <% @now_in_season.each do |item| %>
+              <li><%= item %></li>
+            <% end %>
+          </ul>
+        </section>
+        <section id="last-chance">
+          <h2>Last chance to eat</h2>
+          <ul>
+            <% @last_chance.each do |item| %>
+              <li><%= item %></li>
+            <% end %>
+          </ul>
+        </section>
+        <section id="last-chance">
+          <h2>Now out of season</h2>
+          <ul>
+            <% @now_out_of_season.each do |item| %>
+              <li><%= item %></li>
+            <% end %>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
