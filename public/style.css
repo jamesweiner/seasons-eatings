@@ -74,6 +74,11 @@ ul {
   text-transform: uppercase;
 }
 
+.in-season-image {
+  margin-bottom: 1.75em;
+  text-align: center;
+}
+
 .recipe .credit {
   font-size: 0.875em;
 }
