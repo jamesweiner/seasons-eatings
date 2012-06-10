@@ -87,6 +87,28 @@ ul {
   font-size: 0.75em;
 }
 
-.in-season, .last-chance, .out-of-season {
+.other-foods {
   font-size: 1.5em;
+}
+
+.other-foods section {
+  margin-top: 1em;
+}
+
+.other-foods section:first-child {
+  margin-top: 0;
+}
+
+.other-foods h2 {
+  margin-top: 0;
+  margin-bottom: 0.2em;
+}
+
+.other-foods p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.other-foods .item {
+  font-style: italic;
 }
