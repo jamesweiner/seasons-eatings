@@ -42,29 +42,19 @@
           <p>Stuffed Tomatoes: scoop 4lrg toms. Mince insides/shallot/8olives; mix+2c cookedrice/3T mayo&pinenuts/T olvoil/s+p. Fill toms. 20m@400F/200C.</p>
           <p class="credit">Recipe from @Cookbook - Maureen Evans, author of Eat Tweet, published by Artisan Books (2010).</p>
         </section>
-        <section class="in-season">
-          <h2>Also now in season</h2>
-          <ul>
-            <% @now_in_season.each do |item| %>
-              <li><%= item %></li>
-            <% end %>
-          </ul>
-        </section>
-        <section class="last-chance">
-          <h2>Last chance to eat</h2>
-          <ul>
-            <% @last_chance.each do |item| %>
-              <li><%= item %></li>
-            <% end %>
-          </ul>
-        </section>
-        <section class="out-of-season">
-          <h2>Now out of season</h2>
-          <ul>
-            <% @now_out_of_season.each do |item| %>
-              <li><%= item %></li>
-            <% end %>
-          </ul>
+        <section class="other-foods">
+          <section class="in-season">
+            <h2>Also now in season</h2>
+            <p><%= to_sentence @now_in_season %></p>
+          </section>
+          <section class="last-chance">
+            <h2>Last chance to eat</h2>
+            <p><%= to_sentence @last_chance %></p>
+          </section>
+          <section class="out-of-season">
+            <h2>Now out of season</h2>
+            <p><%= to_sentence @now_out_of_season %></p>
+          </section>
         </section>
       </div>
     </div>
