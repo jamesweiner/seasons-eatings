@@ -79,6 +79,14 @@ ul {
   text-align: center;
 }
 
+.recipe {
+  font-size: 1.25em;
+}
+
 .recipe .credit {
-  font-size: 0.875em;
+  font-size: 0.75em;
+}
+
+.in-season, .last-chance, .out-of-season {
+  font-size: 1.5em;
 }
